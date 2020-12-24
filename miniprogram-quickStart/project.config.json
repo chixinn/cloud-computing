@@ -31,7 +31,6 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true
@@ -54,12 +53,40 @@
     "game": {
       "list": []
     },
+    
     "miniprogram": {
       "list": [
         {
           "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "name": "丽娃咸鱼",
+          "pathName": "pages/secondhandstore/secondhandstore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "失物招领",
+          "pathName": "pages/foundthing/foundthing",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "跑腿代购",
+          "pathName": "pages/shophelper/shophelper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人中心",
+          "pathName": "pages/me/me",
+          "query": ""
+        }
+        {
+          "id": -1,
+          "name": "抱团回家",
+          "pathName": "pages/campustrip/campustrip",
+          "query": ""
         }
       ]
     }
