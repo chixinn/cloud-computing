@@ -1,0 +1,10 @@
+/* miniprogram/pages/find/find1/find1.wxss */
+/* pages/findinvation/find1/find1.wxss */
+button{
+  width:160px
+}
+.item{
+  background-color:#ddd;
+  margin: 10px;
+  padding: 10px;
+}

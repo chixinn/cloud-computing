@@ -1,0 +1,33 @@
+/* miniprogram/pages/frontdemo/frontdemo.wxss */
+/* pages/demo/demo.wxss */
+
+.banner{height: 275rpx;border: 1px solid gold;}
+.banner image{width: 100%;height: 275rpx;}
+.des1{text-align: center;justify-content: center;font-size: 50rpx;border-radius: 10px;
+  background-color: rgb(202, 240, 219);display: block; padding: 20rpx;margin-bottom: 75rpx;margin-top: 75rpx;}
+.box{
+  text-align: center;
+  width: 280rpx;
+  height: 210rpx;
+  display: inline-block;
+  padding:30rpx;
+  background-color: rgb(247, 247, 247);
+  margin:16rpx;
+  border-radius: 10px;
+  flex-wrap: warp;
+}
+.des .pic{width: 275rpx;height: 185rpx;}
+.des .txt{font-size: 30rpx;}
+.background{
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+.container{
+  padding: 0 0;
+  
+}
+

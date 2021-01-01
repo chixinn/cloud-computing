@@ -27,7 +27,6 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -36,56 +35,75 @@
     "minifyWXSS": true
   },
   "appid": "wxee86a9364b41f67e",
-  "projectname": "ecnu%E4%B8%BD%E5%A8%83",
+  "projectname": "New",
   "libVersion": "2.8.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
     "game": {
       "list": []
     },
+    "gamePlugin": {
+      "list": []
+    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "丽娃咸鱼",
-          "pathName": "pages/secondhandstore/secondhandstore",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
-          "name": "失物招领",
-          "pathName": "pages/foundthing/foundthing",
-          "query": ""
-        },
-        {
-          "id": -1,
-          "name": "跑腿代购",
-          "pathName": "pages/shophelper/shophelper",
+          "name": "pages/fillinfo/fillinfo",
+          "pathName": "pages/fillinfo/fillinfo",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
-          "name": "个人中心",
-          "pathName": "pages/me/me",
-          "query": ""
+          "name": "pages/myinfo/myinfo",
+          "pathName": "pages/myinfo/myinfo",
+          "query": "",
+          "scene": null
         },
         {
-          "id": -1,
-          "name": "抱团回家",
-          "pathName": "pages/campustrip/campustrip",
-          "query": ""
+          "name": "pages/frontdemo/frontdemo",
+          "pathName": "pages/frontdemo/frontdemo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find1/find1",
+          "pathName": "pages/find/find1/find1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find2/find2",
+          "pathName": "pages/find/find2/find2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find3/find3",
+          "pathName": "pages/find/find3/find3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/create/cre1/cre1",
+          "pathName": "pages/create/cre1/cre1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/create/cre2/cre2",
+          "pathName": "pages/create/cre2/cre2",
+          "scene": null
         }
       ]
     }

@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view>
+ <image class="background" src="cloud://data-nk0cg.6461-data-nk0cg-1302648785/images/5252.jpg" mode="aspectFill"></image>
+</view>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="toUserInfo" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    
+  </view>
+</view>
+
+<view class='myContainer'>
+
+  <view class='optionBox'>
+    <view class='item' bindtap="getmyinfo">
+      <view class='item_icon'>
+        <image src='/images/信息.png'></image>
+      </view>
+      <view class='item_content'> 个人信息</view>
+      <text decode="{{true}}" class='item_content_footer'>&gt;</text>
+    </view>
+
+    <view class='item' bindtap="getmytrip">
+      <view class='item_icon'>
+        <image src='/images/旅程.png'></image>
+      </view>
+      <view class='item_content'>我的旅程
+      </view>
+      <text decode="{{true}}" class='item_content_footer'>&gt;</text>
+    </view>
+    <button bindtap="testfun" type="primary">测试testfun</button>
+    <button bindtap="getmyinfo" type="primary">测试getmyinfo</button>
+    <button bindtap="getmytrip" type="primary">测试getmytrip</button>
+
+
+    <!--额外实现的跑腿/二手市场功能在这里改-->
+    <view class='item' bindtap="toPaotui">
+      <view class='item_icon'>
+        <image src='/images/旅程.png'></image>
+      </view>
+      <view class='item_content'>我的跑腿
+      </view>
+      <text decode="{{true}}" class='item_content_footer'>&gt;</text>
+    </view>
+
+  </view>
+</view>
