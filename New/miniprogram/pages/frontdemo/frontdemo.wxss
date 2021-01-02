@@ -4,7 +4,7 @@
 .banner{height: 275rpx;border: 1px solid gold;}
 .banner image{width: 100%;height: 275rpx;}
 .des1{text-align: center;justify-content: center;font-size: 50rpx;border-radius: 10px;
-  background-color: rgb(202, 240, 219);display: block; padding: 20rpx;margin-bottom: 75rpx;margin-top: 75rpx;}
+  background-color: rgb(161, 224, 148);display: block; padding: 20rpx;margin-bottom: 75rpx;margin-top: 75rpx;}
 .box{
   text-align: center;
   width: 280rpx;
@@ -16,7 +16,7 @@
   border-radius: 10px;
   flex-wrap: warp;
 }
-.des .pic{width: 275rpx;height: 185rpx;}
+.des .pic{width: 185rpx;height: 185rpx;}
 .des .txt{font-size: 30rpx;}
 .background{
   width: 100%;

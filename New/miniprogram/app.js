@@ -56,7 +56,8 @@ App({
     userInfo: null,//微信公开授权那个个人信息
     openid: null,
     nowinvation: null,
-    ifexist:false//是否填了
+    ifexist:false,//是否填了,
+    currentTab:-1
     }
   }
 })

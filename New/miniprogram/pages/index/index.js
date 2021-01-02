@@ -30,7 +30,8 @@ Page({
                 url: '/pages/index/index'})
             } else {//这里是点击了取消以后
           }
-        }})
+        }}
+        )
 
     }
     else if (app.globalData.ifexist==false){
@@ -86,7 +87,7 @@ Page({
     else if (app.globalData.ifexist==true){
       wx.navigateTo({
         //当已经存在个人信息的时候
-        url: '/pages/fillinfo/fillinfo'
+        url: '/pages/create/cre1/cre1'
       })//微信内页面跳转
     }
 
@@ -131,5 +132,7 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  
+ 
 })

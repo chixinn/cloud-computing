@@ -15,7 +15,7 @@ Page({
     crestatus:['等待中','已确认'],
     findstatus:['等待确认','对方已接受'],
     finvation:[],
-    navbar: ['我创建的', '我申请的'],
+    navbar: ['我创建的', '我申请的'],//查看我的旅程最上面navBar的来源
     currentTab: 0,
   },
   navbarTap: function (e) {
@@ -24,7 +24,7 @@ Page({
     })
     //为什么这里是app.globalData
     app.globalData.currentTab = e.currentTarget.dataset.idx;
-    consoled.log("app.globalData.currentTab打印测试",app.globalData.currentTab)
+    console.log("app.globalData.currentTab打印测试",app.globalData.currentTab)
   },
   onShow() {
     this.setData({
@@ -37,10 +37,32 @@ Page({
     wx.showLoading({
       title: '请稍后',
     })
+    console.log("全局变量打印测试",app.globalData)
     if (app.globalData.userInfo==null){
+      wx.showModal({
+        title: '提示',
+        content: '亲，我们首先需要获取一下您的头像跟昵称呢',
+          success: function (res) {
+            if (res.confirm) {//这里是点击了确定以后
+                wx.switchTab({//wx.switchTab是干什么用的
+                url: '/pages/index/index'})
+            } else {//这里是点击了取消以后
+          }
+        }}
+        )
 
     }
-    else if (app.globalData.openid==null){
+    else if (app.globalData.ifexist==false){
+      wx.showModal({
+        title: '提示',
+        content: '亲，这边需要您先完善一下个人信息呢',
+          success: function (res) {
+            if (res.confirm) {//这里是点击了确定以后
+              wx.navigateTo({//注意wx.navigateTo和switchTab的区别
+                url: '/pages/fillinfo/fillinfo'})
+            } else {//这里是点击了取消以后
+          }
+        }})
 
     }
     else{
@@ -58,8 +80,10 @@ Page({
   //获取创建列表
   getcrelist(){
     //使用openid进行索引
-     myinvation.doc(app.globalData.openid
-    ).get({
+    console.log("open_id定位打印测试",app.globalData.openid)
+     myinvation.where({
+       _openid:app.globalData.openid
+     }).get({
       success: res =>{
         console.log("resTest",res)
         this.setData({
@@ -79,13 +103,20 @@ Page({
         
         console.log(this.data.creinvation)
         
+      },
+      fail:res=>{
+        console.log("doc查询索引API调用发起失败",res)
+
       }
     })
   },
   //获取加入列表
    async getfindlist(){  
     let {finvation}=this.data//对象
-    let res= await myapply.doc(app.globalData.openid).get()  //从数据库获取数据
+    // let res= await myapply.doc(app.globalData.openid).get()  //从数据库获取数据
+    let res= await myapply.where({
+      _openid:app.globalData.openid
+    }).get()
     this.setData({
       finvation : res.data,  //刷新获得data，链接数据
     })
@@ -134,7 +165,7 @@ Page({
   finddetail:async function(e){
     innerAudioContext.play()
     myinvation.where({
-      _id:e.currentTarget.dataset.now
+      _openid:e.currentTarget.dataset.now
     }).get({
       success: res=>{
         if(res.data.length!=0){

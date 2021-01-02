@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view>
- <image class="background" src="cloud://data-nk0cg.6461-data-nk0cg-1302648785/images/5252.jpg" mode="aspectFill"></image>
+ <image class="background" src="cloud://liwapaotui-3gzl16crdee48e86.6c69-liwapaotui-3gzl16crdee48e86-1304586505/indexBG.jpg" mode="aspectFill"></image>
 </view>
 <view class="container">
   <view class="userinfo">
@@ -35,9 +35,9 @@
       </view>
       <text decode="{{true}}" class='item_content_footer'>&gt;</text>
     </view>
-    <button bindtap="testfun" type="primary">测试testfun</button>
-    <button bindtap="getmyinfo" type="primary">测试getmyinfo</button>
-    <button bindtap="getmytrip" type="primary">测试getmytrip</button>
+    <!-- <button bindtap="testfun" type="primary">测试testfun</button> -->
+    <!-- <button bindtap="getmyinfo" type="primary">测试getmyinfo</button> -->
+    <!-- <button bindtap="getmytrip" type="primary">测试getmytrip</button> -->
 
 
     <!--额外实现的跑腿/二手市场功能在这里改-->

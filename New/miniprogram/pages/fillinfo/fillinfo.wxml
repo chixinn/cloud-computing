@@ -2,7 +2,7 @@
 <!-- <text>miniprogram/pages/fillinfo/fillinfo.wxml</text> -->
 <!--pages/fillinfo/fillinfo.wxml-->
 <view>
- <image class="background" src="cloud://data-nk0cg.6461-data-nk0cg-1302648785/images/5252.jpg" mode="aspectFill"></image>
+ <image class="background" src="cloud://liwapaotui-3gzl16crdee48e86.6c69-liwapaotui-3gzl16crdee48e86-1304586505/indexBG.jpg" mode="aspectFill"></image>
 </view>
 <view class="Tooltip">{{infomess2}}</view>
 <view class="itemView">姓名：

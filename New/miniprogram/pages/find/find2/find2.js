@@ -39,7 +39,7 @@ Page({
     if(app.globalData.userInfo==null)
     {
       wx.switchTab({
-      url: '/pages/frontdemo/frontdemo'})
+      url: '/pages/index/index'})
       wx.showModal({
       title: '提示',
       content: '亲，我们需要获取一下您的头像跟昵称呢',
@@ -48,26 +48,37 @@ Page({
               wx.switchTab({
               url: '/pages/index/index'})
           } else {//这里是点击了取消以后
+            wx.showToast({
+              title: '不完善个人信息就是看不了,3s后自动跳转回用户首页',
+              icon:'none',
+              // duration:'100'
+            })
             wx.switchTab({
-              url: '/pages/frontdemo/frontdemo'
+              url: '/pages/index/index' //这里NAVI的逻辑
           })
+       
         }
       }})
     }
       else if(app.globalData.ifexist==false)
       {
       wx.switchTab({
-      url: '/pages/frontdemo/frontdemo'})
+      url: '/pages/index/index'})
       wx.showModal({
       title: '提示',
       content: '亲，这边需要您先完善一下个人信息呢',
         success: function (res) {
           if (res.confirm) {//这里是点击了确定以后
+            wx.showToast({
+              title: '确认完善用户信息ing~',
+              icon:'none',
+              // duration:'100'
+            })
             wx.navigateTo({
               url: '/pages/fillinfo/fillinfo'})
           } else {//这里是点击了取消以后
             wx.switchTab({
-              url: '/pages/frontdemo/frontdemo'
+              url: '/pages/index/index'
           })
         }
       }})
@@ -128,7 +139,7 @@ Page({
     })
   },
   FindDate: async function(){
-    innerAudioContext.play()
+    // innerAudioContext.play()
     this.setData({
       invites:[],
       _page:0,

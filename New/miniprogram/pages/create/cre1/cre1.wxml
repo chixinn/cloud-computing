@@ -39,5 +39,6 @@
 </view>
 </view>
 
+<button bindtap="getcrelis" type="primary">getcrelis测试</button>
 
 <image class="img" src="/images/cre.jpg" bindtap="toCre2" ></image>
