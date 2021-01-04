@@ -9,7 +9,8 @@
     "pages/find/find3/find3",
     "pages/create/cre1/cre1",
     "pages/create/cre2/cre2",
-    "pages/create/cre3/cre3"
+    "pages/create/cre3/cre3",
+    "pages/campustrip/campustrop"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -28,12 +29,7 @@
         "iconPath": "/images/我的1.png",
         "selectedIconPath": "/images/我的2.png"
       },
-      {
-        "pagePath": "pages/find/find1/find1",
-        "text": "查找",
-        "iconPath": "/images/查找1.png",
-        "selectedIconPath": "/images/查找2.png"
-      },
+    
       {
         "pagePath": "pages/frontdemo/frontdemo",
         "text": "出行",

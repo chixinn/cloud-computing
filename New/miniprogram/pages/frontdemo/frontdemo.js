@@ -10,6 +10,7 @@ Page({
 
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -31,6 +32,44 @@ Page({
            console.log(app.globalData.ifexist)
     }
     console.log("res打印测试",res)
+  
+  },
+  jumpfind(){
+    console.log("Page内全局变量测试",app.globalData)
+
+    if(app.globalData.userInfo==null){
+      wx.showModal({
+        title: '提示',
+        content: '亲，我们首先需要获取一下您的头像跟昵称呢',
+          success: function (res) {
+            if (res.confirm) {//这里是点击了确定以后
+                wx.switchTab({//wx.switchTab是干什么用的
+                url: '/pages/frontdemo/frontdemo'})
+            } else {//这里是点击了取消以后
+          }
+        }}
+        )
+
+    }
+    if (app.globalData.ifexist==false){
+      wx.showModal({
+        title: '提示',
+        content: '亲，这边需要您先完善一下个人信息呢',
+          success: function (res) {
+            if (res.confirm) {//这里是点击了确定以后
+              wx.navigateTo({//注意wx.navigateTo和switchTab的区别
+                url: '/pages/fillinfo/fillinfo'})
+            } else {//这里是点击了取消以后
+          }
+        }})
+    }
+    else if (app.globalData.ifexist==true){
+      wx.navigateTo({
+        //当已经存在个人信息的时候
+        url: '/pages/find/find1/find1'
+      })//微信内页面跳转
+    }
+    
   
   },
 

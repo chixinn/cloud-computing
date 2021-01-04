@@ -37,7 +37,7 @@ Page({
               status:1
             }
           }).then(res=>{
-            console.log(res)
+            
             wx.showToast({
               title: '确认成功',
               duration:2000
