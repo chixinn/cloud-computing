@@ -15,8 +15,6 @@ wxee86a9364b41f67e
 在`miniprogram-quickStart/project.config.json`文件下的`"miniprogram":`下面添加我想要的功能。
     `"miniprogram": {"list": [{"id": -1,"name": "db guide","pathName": "pages/databaseGuide/databaseGuide"}]}`这个只是一个demo是需要删掉的。
     
-## 二次开发主要代码
-https://github.com/tzss-ink/wx_campus_helper
 
 ## 暂定结构
 ```` "miniprogram": {
